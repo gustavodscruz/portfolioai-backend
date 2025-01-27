@@ -1,5 +1,5 @@
 {
-  "image": "ghcr.io/devcontainers-extra/features/springboot-sdkman:2",
+  "image": "ghcr.io/devcontainers/features/docker-in-docker:2",
   "features": {
   }
 }
