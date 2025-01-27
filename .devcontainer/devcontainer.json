@@ -1,5 +1,18 @@
 {
-  "image": "ghcr.io/devcontainers/features/docker-in-docker:2",
+  "name": "Java 21 com Maven",
+  "image": "devcontainers/java:21",
   "features": {
-  }
+    "ghcr.io/devcontainers/features/java:21": {
+        "version": "none",
+        "installMaven": "true"
+    }
+  },
+  "extensions": [
+    "ms-java.vscode-java-pack",
+    "vscjava.vscode-maven"
+  ],
+  "settings": {
+    "java.configuration.maven.userSettings": "/workspace/settings.xml"
+  },
+  "workspaceFolder": "/workspace"
 }
