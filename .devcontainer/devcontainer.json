@@ -1,6 +1,6 @@
 {
   "name": "Java 21 com Maven",
-  "image": "devcontainers/java:21",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:21",
   "features": {
     "ghcr.io/devcontainers/features/java:21": {
         "version": "none",
