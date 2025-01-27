@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:16
+    container_name: portfolioai-db
+    restart: always
+    environment:
+      POSTGRES_DB: portfolioai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - portfolio-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_ID: ${UID:-1000}
+        GROUP_ID: ${GID:-1000}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - portfolio-network
+    volumes:
+      - .:/app
+      - ~/.m2:/home/myuser/.m2 # Mapeamento para o diretório .m2
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  portfolio-network:
