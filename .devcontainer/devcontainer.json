@@ -1,0 +1,5 @@
+{
+  "image": "ghcr.io/devcontainers-extra/features/springboot-sdkman:2",
+  "features": {
+  }
+}
