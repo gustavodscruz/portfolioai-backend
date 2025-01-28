@@ -1,11 +1,11 @@
-package tech.gustavodscruz.teste_mapper.repository;
+package tech.gustavodscruz.portfolioai.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import tech.gustavodscruz.teste_mapper.model.entity.User;
+import tech.gustavodscruz.portfolioai.model.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{

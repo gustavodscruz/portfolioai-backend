@@ -1,4 +1,4 @@
-package tech.gustavodscruz.teste_mapper.service;
+package tech.gustavodscruz.portfolioai.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tech.gustavodscruz.teste_mapper.model.entity.User;
-import tech.gustavodscruz.teste_mapper.repository.UserRepository;
+import tech.gustavodscruz.portfolioai.model.entity.User;
+import tech.gustavodscruz.portfolioai.repository.UserRepository;
 
 @Service
 public class UserService {

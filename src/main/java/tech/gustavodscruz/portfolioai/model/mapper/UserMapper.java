@@ -1,12 +1,12 @@
-package tech.gustavodscruz.teste_mapper.model.mapper;
+package tech.gustavodscruz.portfolioai.model.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;
 
-import tech.gustavodscruz.teste_mapper.model.dto.UserDTO;
-import tech.gustavodscruz.teste_mapper.model.entity.User;
+import tech.gustavodscruz.portfolioai.model.dto.UserDTO;
+import tech.gustavodscruz.portfolioai.model.entity.User;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, typeConversionPolicy = ReportingPolicy.ERROR)
 public interface UserMapper {

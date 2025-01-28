@@ -1,4 +1,4 @@
-package tech.gustavodscruz.teste_mapper.model.entity;
+package tech.gustavodscruz.portfolioai.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

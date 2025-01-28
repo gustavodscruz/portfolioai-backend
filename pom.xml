@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tech.gustavodscruz</groupId>
-	<artifactId>teste-mapper</artifactId>
+	<artifactId>portfolioai</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>teste-mapper</name>
-	<description>Demo project for Spring Boot</description>
+	<name>portfolioai</name>
+	<description>Use intelligence to build your portfolio</description>
 	<url/>
 	<licenses>
 		<license/>

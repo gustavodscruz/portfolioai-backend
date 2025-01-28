@@ -1,4 +1,4 @@
-package tech.gustavodscruz.teste_mapper.controller;
+package tech.gustavodscruz.portfolioai.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tech.gustavodscruz.teste_mapper.model.dto.UserDTO;
-import tech.gustavodscruz.teste_mapper.model.entity.User;
-import tech.gustavodscruz.teste_mapper.model.mapper.UserMapper;
-import tech.gustavodscruz.teste_mapper.service.UserService;
+import tech.gustavodscruz.portfolioai.model.dto.UserDTO;
+import tech.gustavodscruz.portfolioai.model.entity.User;
+import tech.gustavodscruz.portfolioai.model.mapper.UserMapper;
+import tech.gustavodscruz.portfolioai.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
