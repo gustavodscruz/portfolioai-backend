@@ -46,7 +46,7 @@ Como funcionará:
 ~~- Resolver bugs com mapstruct~~
 
 - Adicionar entidades
-  ~~- User =~~  
+  - ~~User~~  
 
 - Spring Security
 
