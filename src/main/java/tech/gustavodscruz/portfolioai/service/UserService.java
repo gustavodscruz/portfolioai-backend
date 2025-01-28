@@ -26,4 +26,10 @@ public class UserService {
     public List<User> findAllUsers(){
         return userRepository.findAll();
     }
+
+    public User alterOrAddPhoto(Long id, String photoUrl){
+        User user = userRepository.getReferenceById(id);
+        user.setPhotoUrl(photoUrl);
+        return userRepository.save(user);
+    }
 }
