@@ -43,9 +43,10 @@ Como funcionará:
 
 ## Roadmap
 
-- Resolver bugs com mapstruct
+~~- Resolver bugs com mapstruct~~
 
 - Adicionar entidades
+  ~~- User =~~  
 
 - Spring Security
 
