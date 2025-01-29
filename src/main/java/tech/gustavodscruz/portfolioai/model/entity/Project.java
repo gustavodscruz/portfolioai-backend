@@ -25,7 +25,7 @@ import lombok.Setter;
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long projectId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

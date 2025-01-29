@@ -25,12 +25,12 @@ import lombok.Setter;
 public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long profileId;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-    
+
     private String headline;
 
     @Column(columnDefinition = "TEXT")
