@@ -11,7 +11,7 @@ import tech.gustavodscruz.portfolioai.model.entity.Profile;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, typeConversionPolicy = ReportingPolicy.ERROR)
 public interface ProfileMapper {
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "user.id", expression = "java(profileDTO.getUserId())")
+    @Mapping(target = "user.id", expression = "java(profileDTO.userId())")
     Profile map(ProfileDTO profileDTO);
 
     @Mapping(target = "userId", expression = "java(profile.getUser().getId())")

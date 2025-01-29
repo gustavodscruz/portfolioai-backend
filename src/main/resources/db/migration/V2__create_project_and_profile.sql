@@ -6,7 +6,7 @@ CREATE TABLE profile (
     experiences TEXT[],
     skills TEXT[],
     education TEXT[],
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES app_user(id) ON DELETE CASCADE
 );
 
 CREATE TABLE project (
@@ -17,5 +17,5 @@ CREATE TABLE project (
     repo_url VARCHAR(255),
     live_demo_url VARCHAR(255),
     technologies TEXT[],
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES app_user(id) ON DELETE CASCADE
 );
