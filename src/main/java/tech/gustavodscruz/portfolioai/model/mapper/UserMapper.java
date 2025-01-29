@@ -17,6 +17,6 @@ public interface UserMapper {
 
     @Mapping(source = "linkedin", target = "linkedinProfile")
     @Mapping(source = "github", target = "githubProfile")
-    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "userId", ignore = true)
     User map(UserDTO userDTO);
 }
