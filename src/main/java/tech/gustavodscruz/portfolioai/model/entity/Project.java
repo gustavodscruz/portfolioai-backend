@@ -35,7 +35,7 @@ public class Project {
 
     @Column(columnDefinition = "TEXT")
     private String description;
-    
+
     private String repoUrl;
     private String liveDemoUrl;
     
