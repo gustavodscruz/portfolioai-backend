@@ -14,7 +14,6 @@ import tech.gustavodscruz.portfolioai.model.dto.ProfileDTO;
 import tech.gustavodscruz.portfolioai.model.entity.Profile;
 import tech.gustavodscruz.portfolioai.model.mapper.ProfileMapper;
 import tech.gustavodscruz.portfolioai.service.ProfileService;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -38,12 +37,12 @@ public class ProfileController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Profile> findById(@RequestParam Long id) {
+    public ResponseEntity<Profile> findById(@PathVariable Long id) {
         return ResponseEntity.ok().body(profileService.findById(id));
     }
 
     @GetMapping("/userId/{userId}")
-    public ResponseEntity<List<Profile>> findByUserId(@RequestParam Long userId) {
+    public ResponseEntity<List<Profile>> findByUserId(@PathVariable Long userId) {
         return ResponseEntity.ok().body(profileService.getByUserId(userId));
     }
     

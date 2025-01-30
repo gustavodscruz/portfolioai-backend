@@ -10,7 +10,6 @@ import tech.gustavodscruz.portfolioai.model.entity.Profile;
 import tech.gustavodscruz.portfolioai.model.entity.User;
 import tech.gustavodscruz.portfolioai.model.mapper.ProfileMapper;
 import tech.gustavodscruz.portfolioai.repository.ProfileRepository;
-import tech.gustavodscruz.portfolioai.repository.UserRepository;
 
 @Service
 public class ProfileService {
@@ -35,7 +34,8 @@ public class ProfileService {
 
     public List<Profile> getByUserId(Long userId){
         UserService userService = new UserService();
-        User user = userService.findById(userId);
+        User user = new User();
+        user.setId(userId);
         return profileRepository.findByUser(user);
     }
 

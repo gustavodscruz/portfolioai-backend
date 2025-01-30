@@ -29,4 +29,6 @@ public class User {
 
     @Column(name = "photo_url")
     private String photoUrl;
+
+    public record PhotoUrlDTO(String photoUrl){}
 }

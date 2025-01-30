@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -60,6 +61,11 @@ public class UserController {
         if (userService.deleteUser(id)) 
         return ResponseEntity.status(HttpStatus.valueOf(204)).build();
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
+    @PatchMapping("/{userId}")
+    public ResponseEntity<User> alterUserPhoto(@PathVariable Long userId, @RequestBody User.PhotoUrlDTO photoUrl) {
+        return ResponseEntity.ok().body(userService.alterPhoto(userId, photoUrl.photoUrl()));
     }
 
 }
