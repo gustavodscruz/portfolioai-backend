@@ -19,7 +19,8 @@
 			"extensions": [
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-pg",
-				"RapidAPI.vscode-rapidapi-client"
+				"RapidAPI.vscode-rapidapi-client",
+				"vmware.vscode-boot-dev-pack"
 			]
 		}
 	}
