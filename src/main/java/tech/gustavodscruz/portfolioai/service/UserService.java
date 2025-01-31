@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import tech.gustavodscruz.portfolioai.model.dto.UserDTO;
 import tech.gustavodscruz.portfolioai.model.entity.User;
 import tech.gustavodscruz.portfolioai.model.mapper.UserMapper;
-import tech.gustavodscruz.portfolioai.model.mapper.UserMapperImpl;
 import tech.gustavodscruz.portfolioai.repository.UserRepository;
 
 @Service

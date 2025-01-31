@@ -33,10 +33,11 @@ public class ProfileService {
     }
 
     public List<Profile> getByUserId(Long userId) {
-        User user = User.builder()
-            .id(userId)
-            .build();
-        return profileRepository.findByUser(user);
+        // User user = User.builder()
+        //     .id(userId)
+        //     .build();
+        // return profileRepository.findByUser(user);
+        return profileRepository.findByUserId(userId);
     }
 
     public Profile findById(Long id) {
