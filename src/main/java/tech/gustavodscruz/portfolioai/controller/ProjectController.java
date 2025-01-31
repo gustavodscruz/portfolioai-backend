@@ -47,7 +47,7 @@ public class ProjectController {
     @PutMapping("/{id}")
     public ResponseEntity<Project> updateProject(@PathVariable Long id, @RequestBody ProjectDTO projectDTO) {
         Optional<Project> result = Optional.ofNullable(projectService.updateProject(projectDTO, id));
-        return result.map(project -> ResponseEntity.ok().body(project))
+        return result.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }
 
@@ -67,6 +67,7 @@ public class ProjectController {
     @GetMapping("/{id}")
     public ResponseEntity<Project> findById(@PathVariable Long id) {
         Optional<Project> project = projectService.findById(id);
-        return project.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return project.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
