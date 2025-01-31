@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import tech.gustavodscruz.portfolioai.model.dto.PhotoUrlDTO;
 import tech.gustavodscruz.portfolioai.model.dto.UserDTO;
 import tech.gustavodscruz.portfolioai.model.entity.User;
 import tech.gustavodscruz.portfolioai.model.mapper.UserMapper;
@@ -64,7 +64,7 @@ public class UserController {
     }
 
     @PatchMapping("/{userId}")
-    public ResponseEntity<User> alterUserPhoto(@PathVariable Long userId, @RequestBody User.PhotoUrlDTO photoUrl) {
+    public ResponseEntity<User> alterUserPhoto(@PathVariable Long userId, @RequestBody PhotoUrlDTO photoUrl) {
         return ResponseEntity.ok().body(userService.alterPhoto(userId, photoUrl.photoUrl()));
     }
 

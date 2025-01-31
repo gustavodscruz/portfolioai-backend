@@ -1,0 +1,2 @@
+ALTER TABLE project
+ADD COLUMN profile_id BIGINT REFERENCES profile(id) ON DELETE CASCADE;

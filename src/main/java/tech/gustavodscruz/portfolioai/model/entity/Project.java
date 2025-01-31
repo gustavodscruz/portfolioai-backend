@@ -38,6 +38,10 @@ public class Project {
 
     private String repoUrl;
     private String liveDemoUrl;
+
+    @ManyToOne
+    @JoinColumn(name = "profile_id")
+    private Profile profile;
     
     @ElementCollection
     private List<String> technologies;
