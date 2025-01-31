@@ -13,37 +13,37 @@ import tech.gustavodscruz.portfolioai.repository.ProfileRepository;
 
 @Service
 public class ProfileService {
-    @Autowired 
+    @Autowired
     private ProfileRepository profileRepository;
 
     @Autowired
     private ProfileMapper profileMapper;
 
-    public Profile createProfile(Profile profile){
+    public Profile createProfile(Profile profile) {
         return profileRepository.save(profile);
     }
 
-    public boolean deleteProfile(Long id){
+    public boolean deleteProfile(Long id) {
         profileRepository.deleteById(id);
         return !profileRepository.existsById(id);
     }
 
-    public List<Profile> getAllProfiles(){
+    public List<Profile> getAllProfiles() {
         return profileRepository.findAll();
     }
 
-    public List<Profile> getByUserId(Long userId){
-        UserService userService = new UserService();
-        User user = new User();
-        user.setId(userId);
+    public List<Profile> getByUserId(Long userId) {
+        User user = User.builder()
+            .id(userId)
+            .build();
         return profileRepository.findByUser(user);
     }
 
-    public Profile findById(Long id){
+    public Profile findById(Long id) {
         return profileRepository.getReferenceById(id);
     }
 
-    public Profile updateProfile(Long id, ProfileDTO profileDTO){
+    public Profile updateProfile(Long id, ProfileDTO profileDTO) {
         Profile profile = profileRepository.getReferenceById(id);
         profileMapper.updateProfileFromDTO(profileDTO, profile);
         return profileRepository.save(profile);
